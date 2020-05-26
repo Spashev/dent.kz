@@ -3,15 +3,15 @@
 ## About Project
 We will use the framework Laravel to develop an online store.
 
-- **[Registration]**
-- **[Login]**
-- **[Online payment]**
-- **[Email notifications]**
-- **[Users]**
-- **[Equipments]**
-- **[Applications]**
-- **[Admin panel]**
-- **[Cross-platform]**
+- **Registration**
+- **Login**
+- **Online payment**
+- **Email notifications**
+- **Users**
+- **Equipments**
+- **Applications**
+- **Admin panel**
+- **Cross-platform**
 
 
 <p align="center">
