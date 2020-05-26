@@ -40,12 +40,13 @@
 			</div>
 			<!-- Main Menu -->
 			<ul class="main-menu">
-				<li class="active"><a href="index.html">Главная</a></li>
-				<li><a href="about.html">О нас</a></li>
-				<li><a href="service.html">Сервисы</a></li>
-				<li><a href="blog.html">Новости</a></li>
-				<li><a href="contact.html">Контакты</a></li>
-				<li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li>
+				<li class="active"><a href="{{ route('main') }}">Главная</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Сервисы</a></li>
+				<li><a href="#">Оборудование</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#"><i class="flaticon-020-decay fa-2x"></i></a></li>
 			</ul>
 		</div>
 		<div class="header-info">
