@@ -32,7 +32,7 @@
 		<div class="container">
 			<!-- Site Logo -->
 			<a href="index.html" class="site-logo">
-				<img src="img/logo-test-3.png" alt="" width="48px">
+				<img src="img/logo-test-9.jpg" alt="" width="200px">
 			</a>
 			<!-- responsive -->
 			<div class="nav-switch">
@@ -122,7 +122,7 @@
 				<div class="col-lg-4">
 					<div class="footer-widget">
 						<div class="fw-about">
-							<img src="img/logo-test.png" alt="" width="50px">
+							<img src="img/logo-test-9.jpg" alt=""  width="200px">
 							<p>Подписывайтесь на социальные сети</p>
 							<div class="fw-social">
 								<a href=""><i class="fa fa-pinterest"></i></a>
