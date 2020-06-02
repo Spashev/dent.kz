@@ -40,13 +40,13 @@
 			</div>
 			<!-- Main Menu -->
 			<ul class="main-menu">
-				<li class="active"><a href="{{ route('main') }}">Главная</a></li>
-				<li><a href="{{ route('about') }}">О нас</a></li>
-				<li><a href="#">Сервисы</a></li>
-				<li><a href="#">Оборудование</a></li>
-				<li><a href="#">Новости</a></li>
-				<li><a href="{{ route('contact') }}">Контакты</a></li>
-				<li><a href="#"><i class="flaticon-020-decay fa-2x"></i></a></li>
+				<li class="{{request()->path() == '/' ? 'active' : ''}}"><a href="{{ route('main') }}">Главная</a></li>
+				<li class="{{request()->path() == 'about' ? 'active' : ''}}"><a href="{{ route('about') }}">О нас</a></li>
+				<li class="{{request()->path() == 'service' ? 'active' : ''}}"><a href="#">Сервисы</a></li>
+				<li class="{{request()->path() == 'equipment' ? 'active' : ''}}"><a href="#">Оборудование</a></li>
+				<li class="{{request()->path() == 'news' ? 'active' : ''}}"><a href="#">Новости</a></li>
+				<li class="{{request()->path() == 'contacts' ? 'active' : ''}}"><a href="{{ route('contact') }}">Контакты</a></li>
+				<li class="{{request()->path() == 'active' ? 'active' : ''}}"><a href="#"><i class="flaticon-020-decay fa-2x"></i></a></li>
 			</ul>
 		</div>
 		<div class="header-info">
