@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class AdminAuth
 {
@@ -13,15 +14,12 @@ class AdminAuth
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $params)
+    public function handle($request, Closure $next)
     {
-        if($params === 'auth') {
-            if(!$request->expectsJson()) {
-                return redirect()->route('admin.login');
-            } 
+        if (!Auth::check()) {
+            return redirect()->route('admin.login');
+        } else if(auth()->user()->hasRole('admin')) {
             return $next($request);
-        } else if($params === 'admin') {
-            dd($request->user());
         }
     }
 }

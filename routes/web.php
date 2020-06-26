@@ -17,10 +17,12 @@ Route::get('/contacts', 'HomeController@contact')->name('contact');
 
 
 Route::view('admin/login', 'admin.login')->name('admin.login');
-
-Route::name('admin.')->middleware(['admin:auth'])->prefix('admin')->namespace('Admin')->group(function () {
+Route::name('admin.')->middleware('admin')->prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/', function() {
-        return url('admin/dashboard');
+        return redirect()->route('admin.index');
     });
     Route::get('/dashboard', 'AdminController@index')->name('index');
+    Route::view('/user', 'admin.profile')->name('user.profile');
+    Route::view('/contact', 'admin.contact')->name('contact');
+    Route::get('/products', 'ProductController@index')->name('product');
 });

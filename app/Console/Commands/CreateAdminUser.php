@@ -2,7 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class CreateAdminUser extends Command
 {
@@ -43,6 +46,17 @@ class CreateAdminUser extends Command
     {
         $this->name = $this->ask('What is your name?');
         $this->email = $this->ask('What is your email?');
-        $this->password = $this->ask('Create password?');
+        $this->password = $this->secret('Create password?');
+
+        $user = User::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'password' => Hash::make($this->password)
+        ]);
+
+        $role = Role::first();
+
+        $user->givePermissionTo('all privileges');
+        $user->assignRole('admin');
     }
 }
